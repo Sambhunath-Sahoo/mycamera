@@ -20,7 +20,6 @@ video {
   height: 90vh;
   width: 59vw;
   border-radius: 10px;
-  border-radius: 10px;
   background: linear-gradient(145deg, #282528, #212021);
   box-shadow: 10px 10px 20px #141314, -10px -10px 20px #363336;
 }
@@ -28,7 +27,6 @@ video {
 .action-cont {
   height: 15rem;
   width: 5rem;
-  /* background-color: lightblue; */
   position: absolute;
   top: calc((100vh - 15rem) / 2);
   right: 5rem;
@@ -41,7 +39,9 @@ video {
 .action-cont > * {
   width: 100%;
   height: 5rem;
-  border-radius: 50%;
+  border-radius: 121px;
+  border-radius: 100%;
+  box-shadow: inset 7.21px 7.21px 15px #211F1F, inset -7.21px -7.21px 15px #534D4D;
   border: 5px solid gray;
   display: flex;
   justify-content: center;
@@ -113,7 +113,6 @@ video {
     display: flex;
     flex-direction: row;
     left: 8rem;
-    
   }
 
   .action-cont > * {
@@ -148,5 +147,5 @@ video {
   }
   .timer {
     display: none;
-  } 
+  }
 }
