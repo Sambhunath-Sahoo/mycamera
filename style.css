@@ -1,85 +1,152 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .video-cont {
-    height: 100vh;
-    width: 100vw;
-    background: black;
+  height: 100vh;
+  width: 100vw;
+  background: #252325;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 video {
-    height: 100vh;
-    width: 100vw;
+  height: 90vh;
+  width: 59vw;
+  border-radius: 10px;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #282528, #212021);
+  box-shadow: 10px 10px 20px #141314, -10px -10px 20px #363336;
 }
 
 .action-cont {
-    height: 15rem;
-    width: 5rem;
-    /* background-color: lightblue; */
-    position: absolute;
-    top: calc( ( 100vh - 15rem ) / 2 );
-    right: 5rem;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  height: 15rem;
+  width: 5rem;
+  /* background-color: lightblue; */
+  position: absolute;
+  top: calc((100vh - 15rem) / 2);
+  right: 5rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .action-cont > * {
-    width: 100%;
-    height: 5rem;
-    border-radius: 50%;
-    border: 5px solid gray;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  height: 5rem;
+  border-radius: 50%;
+  border: 5px solid gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .capture-btn {
-    background-color: white;
-    height: 3rem;
-    width: 3rem;
-    border-radius: 50%;
+  background-color: white;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
 }
 .record-btn {
-    background-color: red;
-    height: 3rem;
-    width: 3rem;
-    border-radius: 50%;
+  background-color: red;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
 }
 
 .scale-record {
-    animation-name: scale-record;
-    animation-iteration-count: infinite;
-    animation-duration: 1s;
+  animation-name: scale-record;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
 }
 
 @keyframes scale-record {
-    0% {
-        transform: scale(0.8);
-    }
-    100% {
-        transform: scale(1.1);
-    }
+  0% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1.1);
+  }
 }
 
 .scale-capture {
-    animation-name: scale-record;
-    animation-iteration-count: infinite;
-    animation-duration: 1s;
+  animation-name: scale-record;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
 }
 
 @keyframes scale-capture {
-    0% {
-        transform: scale(0.8);
-    }
-    100% {
-        transform: scale(1.1);
-    }
+  0% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.timer-cont {
+  position: absolute;
+  bottom: 10rem;
+  left: 5rem;
+  color: rgb(192, 199, 219);
+  font-size: 0.8rem;
+}
+.timer {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .action-cont {
+    height: 5rem;
+    width: 10rem;
+    position: absolute;
+    top: 35rem;
+    right: 10rem;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    left: 8rem;
+    
+  }
+
+  .action-cont > * {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: 5px solid gray;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .capture-btn {
+    background-color: white;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+  }
+  .record-btn {
+    background-color: red;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+  }
+
+  .timer-cont {
+    position: absolute;
+    top: 30rem;
+    left: 10rem;
+    color: rgb(192, 199, 219);
+    font-size: 0.8rem;
+  }
+  .timer {
+    display: none;
+  } 
 }
