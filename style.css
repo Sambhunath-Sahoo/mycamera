@@ -41,7 +41,8 @@ video {
   height: 5rem;
   border-radius: 121px;
   border-radius: 100%;
-  box-shadow: inset 7.21px 7.21px 15px #211F1F, inset -7.21px -7.21px 15px #534D4D;
+  box-shadow: inset 7.21px 7.21px 15px #211f1f,
+    inset -7.21px -7.21px 15px #534d4d;
   border: 5px solid gray;
   display: flex;
   justify-content: center;
