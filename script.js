@@ -70,13 +70,28 @@ captureBtnCont.addEventListener('click', (e) => {
 
     let tool = canvas.getContext('2d');
     // how much area do you want to capture
-    tool.drawImage(video, 0, 0, video.videoWidth, video.videoHeight);
+    tool.drawImage(video, 0, 0, canvas.videoWidth, canvas.videoHeight);
 
-    let imageURL =  canvas.toDataURL("a");
+    tool.fillStyle = transparentColor;
+    tool.fillRect(0, 0, canvas.width, canvas.height);
+
+    let imageURL = canvas.toDataURL("a");
     let a = document.createElement("a");
     a.href = imageURL;
     a.download = "image.jpg";
     a.click();
+})
+
+
+// Filtering logic
+let filterLayer = document.querySelector(".filter-layer");
+let allFilters = document.querySelectorAll(".filter");
+allFilters.forEach((filterElem) => {
+    filterElem.addEventListener("click", (e) => {
+        // Get style
+        transparentColor = getComputedStyle(filterElem).getPropertyValue("background-color");
+        filterLayer.style.backgroundColor = transparentColor;
+    })
 })
 
 // for timer

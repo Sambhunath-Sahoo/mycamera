@@ -34,6 +34,7 @@ video {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  z-index: 2;
 }
 
 .action-cont > * {
@@ -159,6 +160,7 @@ video {
   height: 16rem;
   width: 5rem;
   background-color: aqua;
+  z-index: 2;
 }
 
 .filter {
@@ -171,14 +173,26 @@ video {
 }
 
 .orange {
-  background-color: #ffa60060;
+  background-color: #ffa6002f;
 }
 .brown {
-  background-color: #a52a2a6b;
+  background-color: #a52a2a31;
 }
 .pink {
-  background-color: #ffc0cb9a;
+  background-color: #ffc0cb34;
 }
 .transparent {
   background-color: transparent;
+}
+
+.filter-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* will change it */
+  /* width: 59vw; */
+  /* height: 90vh; */
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
 }
