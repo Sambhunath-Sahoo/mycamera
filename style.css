@@ -104,6 +104,53 @@ video {
   display: none;
 }
 
+/* filter container */
+.filter-cont {
+  position: absolute;
+  top: calc((100vh - 16rem) / 2);
+  left: 5rem;
+  height: 16rem;
+  width: 5rem;
+  background-color: aqua;
+  z-index: 2;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #282528, #212021);
+  box-shadow: 10px 10px 20px #141314, -10px -10px 20px #363336;
+}
+
+.filter {
+  height: 4rem;
+  background-position: center;
+  background-size: 100% 100%;
+  background-color: rgba(58, 134, 75, 0.048);
+  background-blend-mode: color-burn;
+}
+
+.orange {
+  background-color: #ffa6002f;
+}
+.brown {
+  background-color: #a52a2a31;
+}
+.pink {
+  background-color: #ffc0cb34;
+}
+.transparent {
+  background-color: transparent;
+}
+
+.filter-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* will change it */
+  /* width: 59vw; */
+  /* height: 90vh; */
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+
 @media screen and (max-width: 600px) {
   .action-cont {
     height: 5rem;
@@ -147,52 +194,23 @@ video {
     color: rgb(192, 199, 219);
     font-size: 0.8rem;
   }
+
   .timer {
     display: none;
   }
-}
 
-/* filter container */
-.filter-cont {
-  position: absolute;
-  top: calc((100vh - 16rem) / 2);
-  left: 5rem;
-  height: 16rem;
-  width: 5rem;
-  background-color: aqua;
-  z-index: 2;
-}
-
-.filter {
-  height: 4rem;
-  background-image: url("https://picsum.photos/seed/picsum/200/300");
-  background-position: center;
-  background-size: 100% 100%;
-  background-color: rgba(58, 134, 75, 0.048);
-  background-blend-mode: color-burn;
-}
-
-.orange {
-  background-color: #ffa6002f;
-}
-.brown {
-  background-color: #a52a2a31;
-}
-.pink {
-  background-color: #ffc0cb34;
-}
-.transparent {
-  background-color: transparent;
-}
-
-.filter-layer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  /* will change it */
-  /* width: 59vw; */
-  /* height: 90vh; */
-  width: 100vw;
-  height: 100vh;
-  z-index: 1;
+  .filter-cont {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: calc((100vh - 16rem) / 2);
+    left: 1rem;
+    height: 16rem;
+    width: 3rem;
+    background-color: aqua;
+    z-index: 2;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #282528, #212021);
+    box-shadow: 10px 10px 20px #141314, -10px -10px 20px #363336;
+  }
 }
