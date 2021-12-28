@@ -17,7 +17,7 @@ body {
 }
 
 video {
-  height: 90vh;
+  height: 85vh;
   width: 59vw;
   border-radius: 10px;
   background: linear-gradient(145deg, #282528, #212021);
@@ -141,14 +141,12 @@ video {
 
 .filter-layer {
   position: absolute;
-  top: 0;
-  left: 0;
-  /* will change it */
-  /* width: 59vw; */
-  /* height: 90vh; */
-  width: 100vw;
-  height: 100vh;
+  top: 68px;
+  left: 357px;
+  height: 85vh;
+  width: 59vw;
   z-index: 1;
+  border-radius: 10px;
 }
 
 @media screen and (max-width: 600px) {
@@ -212,5 +210,15 @@ video {
     border-radius: 10px;
     background: linear-gradient(145deg, #282528, #212021);
     box-shadow: 10px 10px 20px #141314, -10px -10px 20px #363336;
+  }
+
+  .filter-layer {
+    position: absolute;
+    top: 312px;
+    left: 87px;
+    height: 23.2vh;
+    width: 59vw;
+    z-index: 1;
+    border-radius: 0px;
   }
 }
